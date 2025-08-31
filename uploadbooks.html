@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookWorm Library Management System</title>
+    <link rel="stylesheet" href="/static/css/dash.css">
+    <link rel="stylesheet" href="/static/css/upload.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-inner">
+                    <div class="sidebar-logo-dot"></div>
+                </div>
+            </div>
+            <div class="sidebar-nav">
+                <div class="sidebar-item">
+                    <div class="grid-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <div class="circle-icon">
+                        <div class="circle-icon-dot"></div>
+                    </div>
+                </div>
+                <a href="uploadbooks.html">
+                    <div class="sidebar-item">
+                        <svg width="24px" height="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <polygon fill="white"
+                                points="346.231 284.746 256.039 194.554 165.847 284.746 188.474 307.373 240.039 255.808 240.039 496 272.039 496 272.039 255.808 323.604 307.373 346.231 284.746"
+                                class="ci-primary" />
+                            <path fill="white"
+                                d="M400,161.453V160c0-79.4-64.6-144-144-144S112,80.6,112,160v2.491A122.285,122.285,0,0,0,49.206,195.2,109.4,109.4,0,0,0,16,273.619c0,31.119,12.788,60.762,36.01,83.469C74.7,379.275,105.338,392,136.07,392H200V360H136.07C89.154,360,48,319.635,48,273.619c0-42.268,35.64-77.916,81.137-81.155L144,191.405V160a112,112,0,0,1,224,0v32.04l15.8.2c46.472.588,80.2,34.813,80.2,81.379C464,322.057,428.346,360,382.83,360H312v32h70.83a109.749,109.749,0,0,0,81.14-35.454C484.625,334.339,496,304.889,496,273.619,496,215.182,455.716,169.392,400,161.453Z"
+                                class="ci-primary" />
+                        </svg>
+
+
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-item">
+                <div class="circle-icon">
+                    <div class="circle-icon-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <div class="header-logo">
+                        <div class="header-logo-icon">
+                            <div class="header-logo-inner">
+                                <div class="header-logo-dot"></div>
+                            </div>
+                        </div>
+                        <span class="header-title">BookWorm Library Management System (Community)</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <div class="user-avatar"></div>
+                        <div class="user-details">
+                            <h4>Nisal Gunasekara</h4>
+                            <p>User</p>
+                        </div>
+                    </div>
+                    <svg class="settings-icon icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <div class="top-bar-icons">
+                        <div class="blue-square"></div>
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; color: #666;">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; color: #666;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <button class="share-btn">Share</button>
+                    <span class="top-bar-info">Comments Properties 84%</span>
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="dashboard">
+                <!-- Inside your dashboard grid -->
+                <div class="dashboard-grid">
+                    <!-- Upload Book Form Card -->
+                    <div class="upload-card">
+                        <div class="upload-card-inner">
+                            <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <polygon fill="currentColor"
+                                    points="346.231 284.746 256.039 194.554 165.847 284.746 188.474 307.373 240.039 255.808 240.039 496 272.039 496 272.039 255.808 323.604 307.373 346.231 284.746" />
+                                <path fill="currentColor" d="M400,161.453V160c0-79.4-64.6-144-144-144S112,80.6,112,160v2.491A122.285,122.285,0,0,0,49.206,195.2,109.4,109.4,0,0,0,16,273.619
+                    c0,31.119,12.788,60.762,36.01,83.469C74.7,379.275,105.338,392,136.07,392H200V360H136.07C89.154,360,48,319.635,48,273.619
+                    c0-42.268,35.64-77.916,81.137-81.155L144,191.405V160a112,112,0,0,1,224,0v32.04l15.8.2c46.472.588,80.2,34.813,80.2,81.379
+                    C464,322.057,428.346,360,382.83,360H312v32h70.83a109.749,109.749,0,0,0,81.14-35.454C484.625,334.339,496,304.889,496,273.619
+                    C496,215.182,455.716,169.392,400,161.453Z" />
+                            </svg>
+                            <h3>Upload Book</h3>
+
+                            <form id="uploadBookForm" method="POST" action="/api/books/upload"
+                                enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <input type="text" name="title" placeholder="Book Title" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="author" placeholder="Author" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" name="file" accept="application/pdf" required>
+                                </div>
+                                <button type="submit" class="upload-btn">Upload</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+    <script src="static/js/upload.js"></script>
+</body>
+
+</html>

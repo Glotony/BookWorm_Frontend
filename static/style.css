@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: green;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+h1, h2, h3 {
+    color: #333;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.flash-messages {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.flash-messages div {
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flash-success {
+    background-color: #28a745;
+}
+
+.flash-danger {
+    background-color: #dc3545;
+}
+
+.flash-warning {
+    background-color: #ffc107;
+}
+
+
+.navbar {
+    background-color: #007BFF;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+
+.pdf-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pdf-list li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pdf-list a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.pdf-list a:hover {
+    text-decoration: underline;
+}

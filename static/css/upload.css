@@ -1,0 +1,59 @@
+/* Upload Form Card */
+
+.upload-card {
+  display: block;
+  color: inherit;
+}
+
+.upload-card-inner {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.upload-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  color: #374151;
+}
+
+.upload-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+/* Form styles */
+#uploadBookForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.upload-btn {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+}
+
+.upload-btn:hover {
+  background: #1d4ed8;
+}

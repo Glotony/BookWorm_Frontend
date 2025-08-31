@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div>
+        <div class="form">
+            <img src="static/images/logo.png" alt="Logo">
+            <h1>Welcome Back !!</h1>
+            <p>Please enter your credentials to log in</p>
+
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+
+            <div>
+                <!-- Google login link -->
+                <a href="http://127.0.0.1:3000/api/login/google" class="social-login google">
+                    <i class="fab fa-google"></i> Sign in with Google
+                </a>
+
+                <!-- Discord login link -->
+                <a href="http://127.0.0.1:3000/api/login/discord" class="social-login discord">
+                    <i class="fab fa-discord"></i> Sign in with Discord
+                </a>
+            </div>
+
+            <a href="/forgot.html">Forgot password?</a>
+
+            <button onclick="login()">Sign In</button>
+        </div>
+
+        <div class="second">
+            <img src="static/images/logo2.png" alt="Logo 2">
+            <p>New to our platform? Sign Up now.</p>
+            <a href="/register.html">Sign Up</a>
+        </div>
+    </div>
+
+    <script src="static/auth.js"></script>
+</body>
+
+</html>

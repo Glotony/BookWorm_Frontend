@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body > div{
+    display: flex;
+    width: 1000px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.form h1{
+    font-size: 30px;
+}
+.form {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: auto;
+    align-items: center;
+}
+
+.form input{
+    padding: 12px 16px ;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.form input::placeholder{
+    font-size: 13px;
+    color: #727374;
+ 
+}
+.form button{
+    cursor: pointer;
+    width: 100%;
+    padding: 12px 0px;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+.form > a{
+    color: black;
+}
+
+.second{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 470px;
+    height: 575px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.second img{
+    margin-bottom: 70px;
+}
+.second p{
+    color: white;
+}
+
+.second a{
+    display: block;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 12px 65px;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+/* auth options */
+.social-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    transition: background 0.3s;
+   
+}
+
+.social-login.google {
+    background-color: #0d080e;
+}
+
+.social-login.discord {
+    background-color: #0d080e;
+}
