@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Hall - PDF Manager</title>
+    <link rel="stylesheet" href="/static/css/mainhall.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-inner">
+                    <div class="sidebar-logo-dot"></div>
+                </div>
+            </div>
+            <div class="sidebar-nav">
+                <!-- Back to Dashboard -->
+                <div class="sidebar-item" id="nav-back">
+                    <div class="grid-icon">
+                        <div></div><div></div>
+                        <div></div><div></div>
+                    </div>
+                </div>
+                <!-- Upload Books -->
+                <div class="sidebar-item" id="nav-upload">
+                    <div class="circle-icon">
+                        <div class="circle-icon-dot"></div>
+                    </div>
+                </div>
+                <!-- Your Books -->
+                <div class="sidebar-item" id="nav-mybooks">
+                    <div class="circle-icon">
+                        <div class="circle-icon-dot"></div>
+                    </div>
+                </div>
+                <!-- Reports -->
+                <div class="sidebar-item" id="nav-reports">
+                    <div class="circle-icon">
+                        <div class="circle-icon-dot"></div>
+                    </div>
+                </div>
+                <!-- Help -->
+                <div class="sidebar-item" id="nav-help">
+                    <div class="circle-icon">
+                        <div class="circle-icon-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <div class="header-logo">
+                        <div class="header-logo-icon">
+                            <div class="header-logo-inner">
+                                <div class="header-logo-dot"></div>
+                            </div>
+                        </div>
+                        <span class="header-title">Main Hall</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <div class="user-avatar" id="user-avatar">U</div>
+                        <div class="user-details">
+                            <h4 id="username">User</h4>
+                            <p>Welcome to your library</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie Chart Section -->
+            <div class="chart-section">
+                <svg class="pie-chart" width="200" height="200">
+                    <!-- Dynamic borrowed arc -->
+                    <circle
+                        id="borrowed-arc"
+                        r="80"
+                        cx="100"
+                        cy="100"
+                        fill="transparent"
+                        stroke="#374151"
+                        stroke-width="20"
+                        stroke-dasharray="0 502"
+                        stroke-linecap="round"
+                    ></circle>
+                    <!-- Static background circle -->
+                    <circle
+                        r="80"
+                        cx="100"
+                        cy="100"
+                        fill="transparent"
+                        stroke="#d1d5db"
+                        stroke-width="20"
+                    ></circle>
+                </svg>
+
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <div class="legend-left">
+                            <div class="legend-color borrowed"></div>
+                            <span>Borrowed</span>
+                        </div>
+                        <span id="borrowed-count">0</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-left">
+                            <div class="legend-color returned"></div>
+                            <span>Returned</span>
+                        </div>
+                        <span id="returned-count">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PDFs Section -->
+            <div class="dashboard">
+                <h2>Uploaded PDFs</h2>
+                <div id="pdf-container" class="dashboard-grid">
+                    <!-- PDFs will be dynamically injected here -->
+                </div>
+            </div>
+
+            <!-- Books Section -->
+            <div class="dashboard">
+                <h2>Borrowed Books</h2>
+                <ul id="borrowed-books" class="dashboard-grid book-list">
+                    <!-- Borrowed books injected here -->
+                </ul>
+
+                <h2>Finished Books</h2>
+                <ul id="finished-books" class="dashboard-grid book-list">
+                    <!-- Finished books injected here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/mainhall.js"></script>
+</body>
+</html>

@@ -20,21 +20,28 @@
                 </div>
             </div>
             <div class="sidebar-nav">
-                <div class="sidebar-item">
-                    <div class="grid-icon">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                <!-- Grid Icon (Main Hall) -->
+                <a href="mainhall.html">
+                    <div class="sidebar-item">
+                        <div class="grid-icon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </div>
-                </div>
+                </a>
+
+                <!-- Circle Icon -->
                 <div class="sidebar-item">
                     <div class="circle-icon">
                         <div class="circle-icon-dot"></div>
                     </div>
                 </div>
+
+                <!-- Upload Books -->
                 <a href="uploadbooks.html">
-                <div class="sidebar-item">
+                    <div class="sidebar-item">
                         <svg width="24px" height="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                             <polygon fill="white"
                                 points="346.231 284.746 256.039 194.554 165.847 284.746 188.474 307.373 240.039 255.808 240.039 496 272.039 496 272.039 255.808 323.604 307.373 346.231 284.746"
@@ -43,11 +50,10 @@
                                 d="M400,161.453V160c0-79.4-64.6-144-144-144S112,80.6,112,160v2.491A122.285,122.285,0,0,0,49.206,195.2,109.4,109.4,0,0,0,16,273.619c0,31.119,12.788,60.762,36.01,83.469C74.7,379.275,105.338,392,136.07,392H200V360H136.07C89.154,360,48,319.635,48,273.619c0-42.268,35.64-77.916,81.137-81.155L144,191.405V160a112,112,0,0,1,224,0v32.04l15.8.2c46.472.588,80.2,34.813,80.2,81.379C464,322.057,428.346,360,382.83,360H312v32h70.83a109.749,109.749,0,0,0,81.14-35.454C484.625,334.339,496,304.889,496,273.619,496,215.182,455.716,169.392,400,161.453Z"
                                 class="ci-primary" />
                         </svg>
-
-
-                </div>
+                    </div>
                 </a>
             </div>
+
             <div class="sidebar-item">
                 <div class="circle-icon">
                     <div class="circle-icon-dot"></div>
@@ -162,7 +168,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Chart Section -->
                     <div class="chart-section">
                         <div class="chart-container">
@@ -174,6 +179,10 @@
                                 <circle id="borrowed-arc" cx="100" cy="100" r="80" fill="none" stroke="#374151"
                                     stroke-width="40" stroke-dasharray="0 502.65"
                                     style="transition: stroke-dasharray 1s ease-in-out"></circle>
+                                <!-- Returned books arc -->
+                                <circle id="returned-arc" cx="100" cy="100" r="80" fill="none" stroke="#10b981"
+                                    stroke-width="40" stroke-dasharray="0 502.65"
+                                    style="transition: stroke-dasharray 1s ease-in-out"></circle>
                             </svg>
                         </div>
 
@@ -183,17 +192,25 @@
                                     <div class="legend-color borrowed"></div>
                                     <span class="legend-label">Total Borrowed Books</span>
                                 </div>
-                                <span class="legend-value" id="borrowed-count">85</span>
+                                <span class="legend-value" id="borrowed-count">0</span>
                             </div>
                             <div class="legend-item">
                                 <div class="legend-left">
                                     <div class="legend-color returned"></div>
                                     <span class="legend-label">Total Returned Books</span>
                                 </div>
-                                <span class="legend-value" id="returned-count">32</span>
+                                <span class="legend-value" id="returned-count">0</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-left">
+                                    <div class="legend-color total"></div>
+                                    <span class="legend-label">Total Books</span>
+                                </div>
+                                <span class="legend-value" id="total-count">0</span>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

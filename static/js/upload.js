@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("uploadBookForm");
 
+    // Upload form handler
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
@@ -26,4 +27,56 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("⚠️ Failed to upload. Try again.");
         }
     });
+
+    // Sidebar navigation
+    setupSidebarNavigation();
 });
+
+// Function to handle sidebar navigation
+function setupSidebarNavigation() {
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+    sidebarItems.forEach((item) => {
+        // Check if this is the back-to-dashboard button
+        if (item.id === 'back-to-dashboard') {
+            item.addEventListener('click', () => {
+                window.location.href = "dashboard.html"; // Redirect to dashboard
+            });
+        } else {
+            // For other sidebar items, keep your old behavior
+            item.addEventListener('click', () => {
+                const index = Array.from(sidebarItems).indexOf(item);
+                handleSidebarNavigation(index);
+            });
+        }
+    });
+}
+
+// Your existing handleSidebarNavigation function
+function handleSidebarNavigation(index) {
+    switch(index) {
+        case 0:
+            showModal('Dashboard', 'Navigating to the dashboard...', 'dashboard');
+            break;
+        case 1:
+            showModal('My Books', 'Opening your read and returned books...', 'my-books');
+            break;
+        case 2:
+            showModal('Inventory', 'Accessing the full book inventory...', 'inventory');
+            break;
+        case 3:
+            showModal('Reports', 'Loading library reports...', 'reports');
+            break;
+        case 4:
+            showModal('Help', 'Need assistance? Here’s the help section.', 'help');
+            break;
+        default:
+            console.warn('Unhandled sidebar index:', index);
+    }
+}
+
+// Simple modal/alert function (already in your old JS)
+function showModal(title, message, type) {
+    alert(`${title}\n\n${message}`);
+    console.log(`User clicked: ${type} - ${title}`);
+}
