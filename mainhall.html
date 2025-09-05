@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Hall - PDF Manager</title>
     <link rel="stylesheet" href="/static/css/mainhall.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-logo">
-                <div class="sidebar-logo-inner">
-                    <div class="sidebar-logo-dot"></div>
-                </div>
-            </div>
-            <div class="sidebar-nav">
-                <!-- Back to Dashboard -->
-                <div class="sidebar-item" id="nav-back">
-                    <div class="grid-icon">
-                        <div></div><div></div>
-                        <div></div><div></div>
-                    </div>
-                </div>
-                <!-- Upload Books -->
-                <div class="sidebar-item" id="nav-upload">
-                    <div class="circle-icon">
-                        <div class="circle-icon-dot"></div>
-                    </div>
-                </div>
-                <!-- Your Books -->
-                <div class="sidebar-item" id="nav-mybooks">
-                    <div class="circle-icon">
-                        <div class="circle-icon-dot"></div>
-                    </div>
-                </div>
-                <!-- Reports -->
-                <div class="sidebar-item" id="nav-reports">
-                    <div class="circle-icon">
-                        <div class="circle-icon-dot"></div>
-                    </div>
-                </div>
-                <!-- Help -->
-                <div class="sidebar-item" id="nav-help">
-                    <div class="circle-icon">
-                        <div class="circle-icon-dot"></div>
-                    </div>
-                </div>
-            </div>
+<div class="sidebar">
+    <div class="sidebar-logo">
+        <div class="sidebar-logo-inner">
+            <div class="sidebar-logo-dot"></div>
         </div>
+    </div>
+    <div class="sidebar-nav">
+        <!-- Back to Dashboard -->
+        <div class="sidebar-item" id="nav-back">
+            <svg fill="#999999" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20,10.736 L20,18.5 C20,19.881 18.881,21 17.5,21 L14.5,21 C14.224,21 14,20.776 14,20.5 L14,14.5 C14,14.224 13.776,14 13.5,14 L10.5,14 C10.224,14 10,14.224 10,14.5 L10,20.5 C10,20.776 9.776,21 9.5,21 L6.5,21 C5.119,21 4,19.881 4,18.5 L4,10.736 L3.818,10.886 C3.605,11.062 3.29,11.031 3.114,10.818 C2.939,10.605 2.969,10.29 3.182,10.114 L11.682,3.114 C11.867,2.962 12.133,2.962 12.318,3.114 L20.818,10.114 C21.031,10.29 21.062,10.605 20.886,10.818 C20.71,11.031 20.395,11.062 20.182,10.886 L20,10.736 Z M19.007,9.918 L12,4.148 L4.993,9.918 C4.998,9.945 5,9.972 5,10 L5,18.5 C5,19.328 5.672,20 6.5,20 L9,20 L9,14.5 C9,13.672 9.672,13 10.5,13 L13.5,13 C14.328,13 15,13.672 15,14.5 L15,20 L17.5,20 C18.328,20 19,19.328 19,18.5 L19,10 C19,9.972 19.002,9.945 19.007,9.918 Z"/>
+            </svg>
+        </div>
+
+        <!-- Upload Books -->
+        <div class="sidebar-item" id="nav-upload">
+            <svg width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 16V8M8 12l4-4 4 4" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="4" y="16" width="16" height="4" fill="#000"/>
+            </svg>
+        </div>
+
+        <!-- Your Books -->
+        <div class="sidebar-item" id="nav-mybooks">
+            <svg fill="#999999" width="50px" height="50px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                <path d="M237.48,194.54l-8.28-30.91h0L196.07,39.99a20.02,20.02,0,0,0-24.49-14.14l-29.54,7.92A19.93,19.93,0,0,0,128,28H96a19.87,19.87,0,0,0-8,1.68A19.87,19.87,0,0,0,80,28H48A20.02,20.02,0,0,0,28,48V208a20.02,20.02,0,0,0,20,20H80a19.87,19.87,0,0,0,8-1.68A19.87,19.87,0,0,0,96,228h32a20.02,20.02,0,0,0,20-20V138.78l19.93,74.39a19.99,19.99,0,0,0,24.49,14.14l30.91-8.28h0A20.02,20.02,0,0,0,237.48,194.54Z"/>
+            </svg>
+        </div>
+
+        <!-- Reports -->
+        <div class="sidebar-item" id="nav-reports">
+            <svg width="40px" height="40px" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <g fill="#494c4e" fill-rule="evenodd">
+                    <rect x="15" rx="1" width="3" height="18"/>
+                    <rect x="10" y="5" width="3" height="13" rx="1"/>
+                    <rect x="5" y="9" width="3" height="9" rx="1"/>
+                    <rect y="13" width="3" height="5" rx="1.001"/>
+                </g>
+            </svg>
+        </div>
+
+        <!-- Help -->
+        <div class="sidebar-item" id="nav-help">
+            <svg fill="#000000" width="50px" height="50px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path d="M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Z"/>
+                    <path d="M18,7H14a3,3,0,0,0-3,3v2h2V10a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1v1.17a1,1,0,0,1-.29.71l-2.83,2.83A3,3,0,0,0,15,16.83V20h2V16.83a1,1,0,0,1,.29-.71l2.83-2.83A3,3,0,0,0,21,11.17V10A3,3,0,0,0,18,7Z"/>
+                    <circle cx="16" cy="24" r="2"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
+
 
         <!-- Main Content -->
         <div class="main-content">
@@ -79,26 +95,10 @@
             <div class="chart-section">
                 <svg class="pie-chart" width="200" height="200">
                     <!-- Dynamic borrowed arc -->
-                    <circle
-                        id="borrowed-arc"
-                        r="80"
-                        cx="100"
-                        cy="100"
-                        fill="transparent"
-                        stroke="#374151"
-                        stroke-width="20"
-                        stroke-dasharray="0 502"
-                        stroke-linecap="round"
-                    ></circle>
+                    <circle id="borrowed-arc" r="80" cx="100" cy="100" fill="transparent" stroke="#374151"
+                        stroke-width="20" stroke-dasharray="0 502" stroke-linecap="round"></circle>
                     <!-- Static background circle -->
-                    <circle
-                        r="80"
-                        cx="100"
-                        cy="100"
-                        fill="transparent"
-                        stroke="#d1d5db"
-                        stroke-width="20"
-                    ></circle>
+                    <circle r="80" cx="100" cy="100" fill="transparent" stroke="#d1d5db" stroke-width="20"></circle>
                 </svg>
 
                 <div class="chart-legend">
@@ -144,4 +144,5 @@
 
     <script src="/static/js/mainhall.js"></script>
 </body>
+
 </html>

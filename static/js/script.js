@@ -23,48 +23,40 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // -------------------- Check User --------------------
 function checkUserStatus() {
-    fetch(API_BASE + "/api/dashboard", {
-        method: "GET",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" }
-    })
-    .then(response => {
-        if (!response.ok) throw new Error("API request failed with status " + response.status);
-        return response.json();
-    })
-    .then(res => {
-        if (res.user) {
-            const userNameElem = document.querySelector(".user-details h4");
-            if (userNameElem) userNameElem.textContent = res.user.name;
+    apiRequest("/api/dashboard")
+        .then(res => {
+            if (res.user) {
+                const userNameElem = document.querySelector(".user-details h4");
+                if (userNameElem) userNameElem.textContent = res.user.name;
 
-            const avatarElem = document.querySelector(".user-avatar");
-            if (avatarElem && res.user.picture) {
-                avatarElem.innerHTML = `<img src="${res.user.picture}" alt="User Avatar">`;
+                const avatarElem = document.querySelector(".user-avatar");
+                if (avatarElem && res.user.picture) {
+                    avatarElem.innerHTML = `<img src="${res.user.picture}" alt="User Avatar">`;
+                }
+
+                const borrowedCount = (res.pdfs || []).length;
+                const returnedCount = Math.floor(Math.random() * (borrowedCount + 1));
+
+                const borrowedElem = document.getElementById("borrowed-count");
+                const returnedElem = document.getElementById("returned-count");
+
+                if (borrowedElem) borrowedElem.textContent = borrowedCount;
+                if (returnedElem) returnedElem.textContent = returnedCount;
+
+                animatePieChart(borrowedCount, returnedCount);
+            } else {
+                redirectToIndex();
             }
-
-            const borrowedCount = (res.pdfs || []).length;
-            const returnedCount = Math.floor(Math.random() * (borrowedCount + 1));
-
-            const borrowedElem = document.getElementById("borrowed-count");
-            const returnedElem = document.getElementById("returned-count");
-
-            if (borrowedElem) borrowedElem.textContent = borrowedCount;
-            if (returnedElem) returnedElem.textContent = returnedCount;
-
-            animatePieChart(borrowedCount, returnedCount);
-        } else {
-            redirectToLogin();
-        }
-    })
-    .catch(err => {
-        console.error("Error fetching dashboard:", err);
-        redirectToLogin();
-    });
+        })
+        .catch(err => {
+            console.error("Error fetching dashboard:", err);
+            redirectToIndex();
+        });
 }
 
-// -------------------- Redirect --------------------
-function redirectToLogin() {
-    window.location.href = "/dashboard.html";
+// -------------------- Redirects --------------------
+function redirectToIndex() {
+    window.location.href = "index.html";
 }
 
 // -------------------- Cards --------------------
@@ -78,10 +70,17 @@ function setupCardListeners() {
 
 function handleCardClick(type) {
     switch(type) {
-        case "borrowed": alert("Showing borrowed book list (not implemented)."); break;
-        case "returned": alert("Showing returned book list (not implemented)."); break;
-        case "browse": alert("Browsing book inventory (not implemented)."); break;
-        default: alert("Unknown action.");
+        case "borrowed":
+            alert("Showing borrowed book list (not implemented).");
+            break;
+        case "returned":
+            alert("Showing returned book list (not implemented).");
+            break;
+        case "browse":
+            alert("Browsing book inventory (not implemented).");
+            break;
+        default:
+            alert("Unknown action.");
     }
 }
 
@@ -101,15 +100,30 @@ function animatePieChart(borrowed, returned) {
 function setupSidebarNavigation() {
     const sidebarItems = document.querySelectorAll(".sidebar-item");
     sidebarItems.forEach(item => {
-        const id = item.id; // Use ID instead of index
+        const id = item.id; 
         item.addEventListener("click", () => {
             switch(id) {
-                case "nav-back": window.location.href = "/dashboard.html"; break;
-                case "nav-mybooks": window.location.href = "/yourreadbooks.html"; break;
-                case "nav-upload": window.location.href = "/uploadbooks.html"; break;
-                case "nav-reports": alert("Reports section (not implemented)."); break;
-                case "nav-help": alert("Help section (not implemented)."); break;
-                default: console.warn("Unknown sidebar item:", id);
+                case "nav-back":
+                    window.location.href = "dashboard.html";
+                    break;
+                case "nav-mybooks":
+                    window.location.href = "yourreadbooks.html";
+                    break;
+                case "nav-upload":
+                    window.location.href = "uploadbooks.html";
+                    break;
+                case "nav-reports":
+                    alert("Reports section (not implemented).");
+                    break;
+                case "nav-help":
+                    alert("Help section (not implemented).");
+                    break;
+                case "nav-logout":
+                    // Clear any session storage or cookies if needed
+                    redirectToIndex();
+                    break;
+                default:
+                    console.warn("Unknown sidebar item:", id);
             }
         });
     });
