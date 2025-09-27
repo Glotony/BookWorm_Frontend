@@ -43,7 +43,7 @@ async function login() {
         alert(data.message);
 
         if (response.status === 200) {
-            // window.location.href = "/dashboard.html";
+             window.location.href = "/dashboard.html";
         }
     } catch (error) {
         console.error("Login error:", error);
